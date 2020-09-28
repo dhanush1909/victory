@@ -61,15 +61,18 @@ export default class App extends React.Component {
               medianComponent={<LineSegment ariaLabel={({ datum }) => `custom-label-${datum}`} />}
               maxComponent={
                 <Whisker
-                  ariaLabel={({ datum }) => `ima test ${datum.x}`}
+                  ariaLabel={({ datum }) => `${datum.x} max is ${Math.max(...datum.y)}`}
                   tabIndex={({ index }) => index + 1}
                 />
               }
               minComponent={
-                <Whisker ariaLabel={"ima THE MIN COMPONENT"} tabIndex={({ index }) => index + 1} />
+                <Whisker
+                  ariaLabel={({ datum }) => `${datum.x} min is ${Math.min(...datum.y)}`}
+                  tabIndex={({ index }) => index + 4}
+                />
               }
               dataComponent={
-                <Box ariaLabel={"ima THE DATA BOX COMPONENT"} tabIndex={({ index }) => index + 1} />
+                <Box ariaLabel={"THE DATA BOX COMPONENT"} tabIndex={({ index }) => index + 1} />
               }
             />
           </VictoryChart>

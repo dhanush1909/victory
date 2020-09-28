@@ -50,11 +50,11 @@ export default class VictoryAccessibilityDemo extends React.Component<any> {
                 { x: "yellow", y: [5, 20, 8, 12] },
                 { x: "white", y: [2, 11, 12, 13] }
               ]}
-              ariaLabel={({ datum }) => `bar-value-${datum.x}`}
-              tabIndex={({ index }) => {
-                console.log("-----", index);
-                return 1;
-              }}
+              // ariaLabel={({ datum }) => `bar-value-${datum.x}`}
+              // tabIndex={({ index }) => {
+              //   console.log("-----", index);
+              //   return 1;
+              // }}
             />
           </VictoryChart>
         </div>
